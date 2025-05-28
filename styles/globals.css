@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Dark theme base styles */
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* Custom focus styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900;
+}
+
+/* Animation for gradient text */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+/* Loading animation */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus-ring;
+}
+
+.btn-secondary {
+  @apply bg-gray-700 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200 focus-ring;
+}
+
+.btn-disabled {
+  @apply bg-gray-600 text-gray-400 cursor-not-allowed;
+}
+
+/* Input styles */
+.input-primary {
+  @apply bg-gray-800 border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200;
+}
+
+/* Card styles */
+.card {
+  @apply bg-gray-900 rounded-2xl border border-gray-700 shadow-2xl;
+}
+
+.card-header {
+  @apply border-b border-gray-700 p-6;
+}
+
+.card-body {
+  @apply p-6;
+}
+
+/* Token logo fallback */
+.token-logo-fallback {
+  @apply w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm;
+}
+
+/* Responsive text sizes */
+@screen sm {
+  .text-responsive-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@screen md {
+  .text-responsive-lg {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@screen lg {
+  .text-responsive-lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+/* Custom transitions */
+.transition-all-300 {
+  transition: all 0.3s ease;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(75, 85, 99, 0.2);
+}
+
+/* Rainbow kit custom overrides */
+[data-rk] {
+  --rk-colors-accentColor: #3b82f6;
+  --rk-colors-accentColorForeground: #ffffff;
+  --rk-colors-actionButtonBorder: rgba(255, 255, 255, 0.04);
+  --rk-colors-actionButtonBorderMobile: rgba(255, 255, 255, 0.08);
+  --rk-colors-actionButtonSecondaryBackground: rgba(255, 255, 255, 0.08);
+  --rk-colors-closeButton: rgba(224, 232, 255, 0.6);
+  --rk-colors-closeButtonBackground: rgba(255, 255, 255, 0.08);
+  --rk-colors-connectButtonBackground: #3b82f6;
+  --rk-colors-connectButtonBackgroundError: #ef4444;
+  --rk-colors-connectButtonInnerBackground: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.03),
+    rgba(0, 0, 0, 0.06)
+  );
+  --rk-colors-connectButtonText: #ffffff;
+  --rk-colors-connectButtonTextError: #ffffff;
+  --rk-colors-error: #ef4444;
+  --rk-colors-generalBorder: rgba(255, 255, 255, 0.08);
+  --rk-colors-generalBorderDim: rgba(255, 255, 255, 0.04);
+  --rk-colors-menuItemBackground: rgba(224, 232, 255, 0.1);
+  --rk-colors-modalBackdrop: rgba(0, 0, 0, 0.3);
+  --rk-colors-modalBackground: #1f2937;
+  --rk-colors-modalBorder: rgba(255, 255, 255, 0.08);
+  --rk-colors-modalText: #f9fafb;
+  --rk-colors-modalTextDim: rgba(224, 232, 255, 0.3);
+  --rk-colors-modalTextSecondary: rgba(255, 255, 255, 0.6);
+  --rk-colors-profileAction: rgba(224, 232, 255, 0.1);
+  --rk-colors-profileActionHover: rgba(224, 232, 255, 0.2);
+  --rk-colors-profileForeground: rgba(224, 232, 255, 0.05);
+  --rk-colors-selectedOptionBorder: #3b82f6;
+  --rk-colors-standby: #fbbf24;
+}
+
+/* Ensure proper text contrast in all conditions */
+.text-high-contrast {
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom loader for better UX */
+.custom-loader {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #374151;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -33,11 +33,11 @@ In this video, we’ll walk you through building and deploying a Uniswap V3 Liqu
 
 Kindly follow the following Instructions to run the project in your system and install the necessary requirements
 
-- [Final Source Code]()
+- [Final Source Code](https://www.theblockchaincoders.com/sourceCode/build-a-uniswap-v3-liquidity-creator-dapp-with-next.js-or-next.js-+-uniswap-v3-web3-defi-project)
 
 #### Setup Video
 
-- [Final Code Setup video]()
+- [Final Code Setup video](https://youtu.be/JyOiZFh5mbk?si=Zm8XE-jjTbzcj_cD)
 
 #### Deploying Dapp
 
